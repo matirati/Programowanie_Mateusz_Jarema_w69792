@@ -1,0 +1,119 @@
+style
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 200px;
+    background-color: lightcyan;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0; 
+}
+
+h4 {
+    font-size: 30px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+table.tabela100 {
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    box-shadow: 0 0 10px 2px #aaa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightgray;
+    z-index: 100;
+    padding: 20px 0;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a.home {
+    color: blue; 
+}
+
+footer {
+    clear: both;
+    padding-top: 20px;
+    text-align: center;
+}
+
+nav {
+    padding-top: 100px;
+    margin: 30px;
+}
+
+p {
+    padding-top: 50px;
+}
+article{
+    display: block;
+    margin: 0 120px;
+    font-size: 20px;
+    position: relative, sticky;
+    top:0;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding: 150px 120px;
+    
+}
+article-element{
+    display: block;
+    margin: 0 120px;
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+    padding: 150px 120px;
+    width: 50%;
+}
+section{
+    display: block;
+    margin: 0 120px;
+    font-size: 20px;
+}
+#main-section {
+    position: relative;
+    text-align: center;
+}
+
+#main-section::before {
+    content: '';
+    display: block;
+    height: 100px; 
+}
+
+#main-section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; 
+}
+
+#main-section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
