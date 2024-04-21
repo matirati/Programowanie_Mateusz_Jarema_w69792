@@ -34,3 +34,4 @@ console.log(p);
 console.log(p*(p-a)*(p-b)*(p-c));
 pole=Math.sqrt(p*(p-a)*(p-b)*(p-c));
 console.log(pole);
+document.getElementById("Zad5").innerHTML="Wynik to:" +pole;
