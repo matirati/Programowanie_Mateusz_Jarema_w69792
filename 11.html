@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" />
+      <button type="submit">Guess</button>
+    </form>
+    <span id="wynik"></span>
+  </body>
+
+  <script>
+    const wynik = document.querySelector("#wynik");
+    const form = document.querySelector("form");
+    const guess = document.querySelector("input");
+    const liczba = Math.floor(Math.random() * 100);
+    let proby = 0;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      proby++;
+
+      if (parseInt(guess.value) > liczba) {
+        wynik.textContent = "Za duzo";
+      } else if (parseInt(guess.value) < liczba) {
+        wynik.textContent = "Za malo";
+      } else {
+        wynik.textContent = `Zgadles za ${proby} razem`;
+        setTimeout(() => {
+          location.reload();
+        }, 1000);
+      }
+    });
+  </script>
+</html>

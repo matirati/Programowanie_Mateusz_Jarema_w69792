@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" id="input1" />
+      <input type="number" id="input2" />
+      <button type="submit">Submit</button>
+    </form>
+    <span id="wynik"></span>
+  </body>
+
+  <script>
+    const form = document.querySelector("form");
+    const wynik = document.querySelector("#wynik");
+
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      wynik.textContent = euklides(
+        parseInt(input1.value),
+        parseInt(input2.value)
+      );
+    });
+
+    function euklides(a, b) {
+      if (a !== b) {
+        if (a > b) {
+          return euklides(a - b, b);
+        } else {
+          return euklides(a, b - a);
+        }
+      } else {
+        return a;
+      }
+    }
+  </script>
+</html>

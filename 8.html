@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" id="input1" />
+      <input type="number" id="input2" />
+      <input type="number" id="input3" />
+      <button type="submit">Submit</button>
+    </form>
+    <span id="wynik"></span>
+  </body>
+
+  <script>
+    const form = document.querySelector("form");
+    // const inputs = form.elements;
+    const wynik = document.querySelector("#wynik");
+
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const input3 = document.getElementById("input3");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      wynik.textContent = Math.max(
+        parseFloat(input1.value),
+        parseFloat(input2.value),
+        parseFloat(input3.value)
+      );
+    });
+  </script>
+</html>
