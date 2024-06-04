@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma dwóch największych liczb</title>
+</head>
+<body>
+    <h1>Suma dwóch największych liczb</h1>
+    <p>Tablica liczb: [5, 10, 3, 8, 15]</p>
+    <p>Suma dwóch największych liczb: <span id="result"></span></p>
+
+    <script>
+        function sumOfTwoLargestNumbers(array) {
+            if (array.length < 2) {
+                return "Tablica musi zawierać co najmniej dwie liczby.";
+            }
+
+            array.sort((a, b) => b - a);
+
+            return array[0] + array[1];
+        }
+
+        const numbers = [5, 10, 3, 8, 15];
+
+        document.getElementById('result').textContent = sumOfTwoLargestNumbers(numbers);
+    </script>
+</body>
+</html>
+

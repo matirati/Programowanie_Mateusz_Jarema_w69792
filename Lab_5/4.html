@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generowanie i wyświetlanie liczb losowych</title>
+</head>
+<body>
+
+<p>Liczby losowe:</p>
+<ul id="randomNumbers"></ul>
+
+<script>
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function fillArrayWithRandomNumbers(length, min, max) {
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            array.push(getRandomNumber(min, max));
+        }
+        return array;
+    }
+
+    const randomNumbersList = document.getElementById('randomNumbers');
+    const numbers = fillArrayWithRandomNumbers(10, 1, 100);
+    numbers.forEach(function(number) {
+        const listItem = document.createElement('li');
+        listItem.textContent = number;
+        randomNumbersList.appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>

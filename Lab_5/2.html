@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wstawianie liczby do tablicy</title>
+</head>
+<body>
+
+<script>
+   
+    let numbers = [1, 2, 3, 4, 5, 6];
+
+   
+    const numberToAdd = parseInt(prompt("Podaj liczbę całkowitą do wstawienia:"));
+
+    
+    let indexToAdd = parseInt(prompt("Podaj indeks, na którym chcesz wstawić liczbę:"));
+
+    
+    if (indexToAdd < 0 || indexToAdd > numbers.length) {
+        alert("Podano nieprawidłowy indeks.");
+    } else {
+        numbers.splice(indexToAdd, 0, numberToAdd);
+
+        
+        for (let i = indexToAdd + 1; i < numbers.length; i++) {
+            numbers[i] += 1;
+        }
+
+        
+        document.write("<p>Zmodyfikowana tablica:</p>");
+        document.write("<ul>");
+        for (let i = 0; i < numbers.length; i++) {
+            document.write("<li>" + numbers[i] + "</li>");
+        }
+        document.write("</ul>");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablica liczb całkowitych</title>
+</head>
+<body>
+
+<script>
+    
+    let numbers = [];
+
+   
+    for (let i = 0; i < 10; i++) {
+        const number = parseInt(prompt("Podaj liczbę całkowitą:"));
+        numbers.push(number);
+    }
+
+    
+    document.write("<p>Tablica liczb całkowitych:</p>");
+    document.write("<ul>");
+    for (let i = 0; i < numbers.length; i++) {
+        document.write("<li>" + numbers[i] + "</li>");
+    }
+    document.write("</ul>");
+
+    
+    const targetNumber = parseInt(prompt("Podaj liczbę całkowitą do wyszukania:"));
+
+    
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === targetNumber) {
+            count++;
+        }
+    }
+
+    document.write("<p>Liczba wystąpień liczby " + targetNumber + ": " + count + "</p>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generowanie i wyświetlanie liczb losowych</title>
+</head>
+<body>
+    <script>
+// Tablica liczb
+const numbers = [4, 8, 15, 16, 23, 42];
+
+// a.
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log("Suma wartości: ", sum);
+
+// b. 
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log("Liczby parzyste: ", evenNumbers);
+
+// c. 
+const multipliedNumbers = numbers.map(num => num * 3);
+console.log("Wartości pomnożone razy 3: ", multipliedNumbers);
+
+// d.
+const myAlbumNumber = 12345;
+numbers.push(myAlbumNumber);
+const myAlbumIndex = numbers.indexOf(myAlbumNumber);
+console.log("Index numeru albumu: ", myAlbumIndex);
+
+// e.
+const average = sum / numbers.length;
+console.log("Średnia arytmetyczna: ", average);
+
+// f.
+const maxNumber = Math.max(...numbers);
+console.log("Największa liczba: ", maxNumber);
+
+// g.
+const valueToCount = 15;
+const occurrences = numbers.reduce((count, num) => num === valueToCount ? count + 1 : count, 0);
+console.log("Ilość wystąpień liczby", valueToCount, ": ", occurrences);
+</script>
+
+</body>
+</html>

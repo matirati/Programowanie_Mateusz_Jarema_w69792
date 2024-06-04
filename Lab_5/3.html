@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odwracanie ciągu</title>
+</head>
+<body>
+
+<script>
+    function reverseString(str) {
+        return str.split('').reverse().join('');
+    }
+
+    const inputString = prompt("Podaj ciąg znaków do odwrócenia:");
+
+    const reversedString = reverseString(inputString);
+
+    document.write("<p>Odwrócony ciąg:</p>");
+    document.write("<p>" + reversedString + "</p>");
+</script>
+
+</body>
+</html>

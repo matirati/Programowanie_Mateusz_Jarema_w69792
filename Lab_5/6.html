@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciąg Fibonacciego</title>
+</head>
+<body>
+    <h1>Fibonacci Sequence</h1>
+    <p>Tablica z 100 liczbami ciągu Fibonacciego:</p>
+    <ul id="fibonacciList"></ul>
+
+    <script>
+        
+        function generateFibonacciSequence(length) {
+            let fibonacci = [0, 1]; 
+            for (let i = 2; i < length; i++) {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]; 
+            }
+            return fibonacci;
+        }
+
+       
+        const fibonacciArray = generateFibonacciSequence(100);
+
+        const fibonacciList = document.getElementById('fibonacciList');
+        fibonacciArray.forEach(function(number) {
+            const listItem = document.createElement('li');
+            listItem.textContent = number;
+            fibonacciList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
+

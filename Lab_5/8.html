@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuwanie duplikatów z tablicy</title>
+</head>
+<body>
+    <h1>Usuwanie duplikatów z tablicy</h1>
+    <p>Tablica z duplikatami: [1, 2, 2, 3, 4, 4, 5]</p>
+    <p>Tablica po usunięciu duplikatów: <span id="result"></span></p>
+
+    <script>
+        function removeDuplicates(array) {
+            let uniqueArray = [];
+
+            array.forEach(function(element) {
+                if (!uniqueArray.includes(element)) {
+                    uniqueArray.push(element);
+                }
+            });
+
+            return uniqueArray;
+        }
+
+       
+        const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+
+        
+        document.getElementById('result').textContent = removeDuplicates(arrayWithDuplicates);
+    </script>
+</body>
+</html>
+
