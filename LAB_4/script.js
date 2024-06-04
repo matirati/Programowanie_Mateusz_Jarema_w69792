@@ -66,6 +66,43 @@ const zad6=() => {
     textarea.value = ''
 }
 
+//7
+
+ onst firstNameInput = document.getElementById('firstNameInput');
+    const lastNameInput = document.getElementById('lastNameInput');
+    const addButton = document.getElementById('addButton');
+    const tableBody = document.getElementById('tableBody');
+
+    addButton.addEventListener('click', function() {
+        const firstName = firstNameInput.value.trim();
+        const lastName = lastNameInput.value.trim();
+        if (firstName !== '' && lastName !== '') {
+            const newRow = document.createElement('tr');
+            const firstNameCell = document.createElement('td');
+            const lastNameCell = document.createElement('td');
+            firstNameCell.textContent = firstName;
+            lastNameCell.textContent = lastName;
+            newRow.appendChild(firstNameCell);
+            newRow.appendChild(lastNameCell);
+            tableBody.appendChild(newRow);
+            firstNameInput.value = '';
+            lastNameInput.value = '';
+        }
+    });
+
+//8
+
+ function convertToCelsius() {
+        const temperatureInput = document.getElementById('temperatureInput').value;
+        const result = (parseFloat(temperatureInput) * 9 / 5) + 32;
+        document.getElementById('result').textContent = result.toFixed(2) + " °F";
+    }
+
+    function convertToFahrenheit() {
+        const temperatureInput = document.getElementById('temperatureInput').value;
+        const result = (parseFloat(temperatureInput) - 32) * 5 / 9;
+        document.getElementById('result').textContent = result.toFixed(2) + " °C";
+    }
 
 
 
